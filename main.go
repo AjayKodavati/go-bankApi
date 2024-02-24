@@ -58,5 +58,4 @@ func main() {
 
 	server := api.NewAPIServer(":3000", store)
 	server.Run()
-	fmt.Println("Hello, World!")
 }

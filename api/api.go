@@ -28,6 +28,7 @@ func (s *APIServer) Run() {
   router := mux.NewRouter()
   
   router.HandleFunc("/account", makeHttpHandleFunc(s.handleAccount))
+  router.HandleFunc("/account/{id}", makeHttpHandleFunc(s.handleGetAccountById))
 
   log.Println("Json Api server listening on", s.listenAddr)
   
@@ -68,6 +69,10 @@ func (s *APIServer) handleDeleteAccount(w http.ResponseWriter, r *http.Request) 
 }
 
 func (s *APIServer) handleTransfer(w http.ResponseWriter, r *http.Request) error {
+  return nil
+}
+
+func (s *APIServer) handleGetAccountById(w http.ResponseWriter, r *http.Request) error {
   return nil
 }
 
