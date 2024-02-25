@@ -38,7 +38,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 
 	"main.go/api"
